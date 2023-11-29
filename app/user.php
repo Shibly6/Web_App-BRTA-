@@ -99,6 +99,92 @@ unset($_SESSION['success_message']);
         $(document).ready(function(){
             $('.toast').toast('show');
         });
+
+                // form validation
+
+                $(document).ready(function() {
+    $("form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            id: {
+                required: true,
+                minlength: 5
+            },
+            vehicle_no: {
+                required: true,
+                minlength: 5
+            },
+            chess_no: {
+                required: true,
+                minlength: 5
+            },
+            photo: {
+                required: true,
+                accept: "image/*"
+            },
+            nid_soft_copy: {
+                required: true,
+                accept: "image/*"
+            },
+            present_address: {
+                required: true,
+                minlength: 10
+            },
+            permanent_address: {
+                required: true,
+                minlength: 10
+            }
+        },
+        messages: {
+            name: {
+                required: "Please enter your name.",
+                minlength: "Your name must be at least 2 characters long."
+            },
+            email: {
+                required: "Please enter your email address.",
+                email: "Please enter a valid email address."
+            },
+            id: {
+                required: "Please enter your ID number.",
+                minlength: "Your ID number must be at least 5 characters long."
+            },
+            vehicle_no: {
+                required: "Please enter your vehicle number.",
+                minlength: "Your vehicle number must be at least 5 characters long."
+            },
+            chess_no: {
+                required: "Please enter your chess number.",
+                minlength: "Your chess number must be at least 5 characters long."
+            },
+            photo: {
+                required: "Please select a passport size photo.",
+                accept: "Please select an image file."
+            },
+            nid_soft_copy: {
+                required: "Please select a NID soft copy.",
+                accept: "Please select an image file."
+            },
+            present_address: {
+                required: "Please enter your present address.",
+                minlength: "Your present address must be at least 10 characters long."
+            },
+            permanent_address: {
+                required: "Please enter your permanent address.",
+                minlength: "Your permanent address must be at least 10 characters long."
+            }
+        },
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+})
     </script>
 
 
