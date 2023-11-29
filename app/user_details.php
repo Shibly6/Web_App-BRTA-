@@ -52,6 +52,8 @@ if (isset($_GET['id'])) {
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><strong>Email:</strong> <?php echo $userDetails['email']; ?></li>
+                <li class="list-group-item"><strong>ID No:</strong> <?php echo $userDetails['id']; ?></li>
+
                 <li class="list-group-item"><strong>Vehicle No:</strong> <?php echo $userDetails['vehicle_no']; ?></li>
                 <li class="list-group-item"><strong>Chess No:</strong> <?php echo $userDetails['chess_no']; ?></li>
                 <li class="list-group-item"><strong>Present Address:</strong> <?php echo $userDetails['present_address']; ?></li>
